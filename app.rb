@@ -1,6 +1,8 @@
 require 'sinatra'
 require "shotgun"
 
+
+
 get '/' do
   "hello!"
 end
@@ -18,5 +20,6 @@ get '/test' do
 end
 
 get '/cat' do
+  @random_name = ["George", "David", "Brian", "Vernon", "Keith"].sample
   erb(:index)
 end
