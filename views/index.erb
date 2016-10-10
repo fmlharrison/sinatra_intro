@@ -1,5 +1,14 @@
+<% if @name.nil? %>
+  <form action="/named_cat" method="get">
+    <div>
+      <input type="text" name="name"/>
+      <input type="submit" value="Submit"/>
+    </div>
+  </form>
+<% end %>
 
-<h1>My name is <%= @random_name %> </h1>
+
+<h1>My name is <%= @name %> </h1>
 
 <div style="border:medium dashed red">
   <img src="http://bit.ly/1eze8aE">
